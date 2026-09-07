@@ -1,0 +1,203 @@
+.public-datasets {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.public-dataset {
+  min-width: 0;
+  padding: 25px;
+  border: 1px solid #d4e2e8;
+  border-radius: 9px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.dataset-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.dataset-category {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #236775;
+  font-size: 12px;
+  font-weight: 650;
+}
+.dataset-topline > span:last-child {
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+.public-dataset h4 {
+  margin: 21px 0 11px;
+  font-size: 20px;
+  letter-spacing: -.5px;
+  line-height: 1.55;
+}
+.dataset-description,
+.data-section-heading > p:last-child,
+.data-processing-steps p,
+.data-integration-grid article > p:last-child {
+  font-size: 13px;
+  line-height: 1.85;
+  color: var(--muted);
+}
+.public-data-study {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+.dataset-facts {
+  margin: 22px 0 0;
+  padding: 19px 0;
+  border-block: 1px solid var(--line);
+  display: grid;
+  gap: 17px;
+}
+.dataset-facts dt {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+.dataset-facts dd {
+  margin: 5px 0 0;
+  font-size: 13px;
+  line-height: 1.65;
+  font-weight: 550;
+}
+.dataset-facts .dataset-size dd {
+  color: #236775;
+  font-size: 30px;
+  font-weight: 650;
+  letter-spacing: -1px;
+}
+.dataset-attributes { margin: 19px 0 25px; }
+.dataset-attributes h5 {
+  font-size: 11px;
+  color: var(--muted);
+  font-weight: 500;
+  margin: 0 0 11px;
+}
+.dataset-attributes ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  padding: 0;
+  list-style: none;
+}
+.dataset-attributes li {
+  padding: 5px 9px;
+  background: #eff4f5;
+  color: #405c65;
+  font-size: 11px;
+  line-height: 1.5;
+  border-radius: 4px;
+}
+.dataset-source {
+  margin-top: auto;
+  align-self: flex-start;
+  min-height: 36px;
+}
+.dataset-note {
+  margin-top: 15px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.85;
+}
+.data-processing,
+.data-integrations {
+  margin-top: 38px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+}
+.data-section-heading { margin-bottom: 21px; }
+.data-section-heading h4 {
+  font-size: 21px;
+  letter-spacing: -.5px;
+  line-height: 1.6;
+  margin: 12px 0 9px;
+}
+.data-processing-steps {
+  margin: 0 0 27px;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+}
+.data-processing-steps li {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  padding: 19px;
+  background: #edf3f6;
+  border-radius: 7px;
+}
+.data-step-number {
+  flex-shrink: 0;
+  padding-top: 2px;
+  color: #236775;
+  font-size: 12px;
+  font-weight: 650;
+}
+.data-processing-steps h5,
+.data-integration-grid h5 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  line-height: 1.65;
+}
+.data-column-table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  line-height: 1.8;
+  margin-bottom: 26px;
+}
+.data-column-table caption {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 650;
+  padding-bottom: 14px;
+}
+.data-column-table th,
+.data-column-table td {
+  text-align: left;
+  vertical-align: top;
+  padding: 13px 16px;
+  border-bottom: 1px solid var(--line);
+}
+.data-column-table thead { background: #eaf0f4; }
+.data-column-table thead th:first-child { width: 37%; }
+.data-column-table tbody th { font-weight: 550; }
+.data-column-table td { color: var(--muted); }
+.data-integration-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+}
+.data-integration-grid article {
+  padding: 21px;
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 7px;
+}
+.integration-source {
+  color: #236775;
+  font-size: 11px;
+  line-height: 1.7;
+  margin-bottom: 11px;
+}
+@media (max-width: 600px) {
+  .public-datasets,
+  .data-processing-steps,
+  .data-integration-grid { grid-template-columns: minmax(0, 1fr); }
+  .public-dataset { padding: 20px; }
+  .public-dataset h4 { font-size: 19px; }
+  .data-section-heading h4 { font-size: 19px; }
+  .data-column-table th,
+  .data-column-table td { padding: 12px 10px; }
+  .data-column-table thead th:first-child { width: 39%; }
+}

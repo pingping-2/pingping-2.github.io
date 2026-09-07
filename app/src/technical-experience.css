@@ -1,0 +1,74 @@
+.technical-experience {
+  border-block: 1px solid var(--line);
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+.technical-experience-labels,
+.technical-experience-row {
+  display: grid;
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.8fr) 112px;
+  gap: 36px;
+}
+.technical-experience-labels {
+  color: var(--muted);
+  font-size: 11px;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--line);
+}
+.technical-experience-row { padding-block: 30px; }
+.technical-experience-row + .technical-experience-row { border-top: 1px solid var(--line); }
+.technical-experience-title > p {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+  margin-bottom: 9px;
+}
+.technical-experience-title h3 {
+  font-size: 18px;
+  line-height: 1.65;
+  letter-spacing: -.4px;
+  font-weight: 650;
+}
+.technical-experience-tasks {
+  padding: 0 0 0 16px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+.technical-experience-tasks li + li { margin-top: 8px; }
+.technical-experience-tasks li::marker { color: #6d87aa; font-size: 9px; }
+.technical-experience-projects {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+.technical-experience-projects button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 11px;
+  min-height: 38px;
+  border: 1px solid #d8e1ed;
+  border-radius: 5px;
+  padding: 8px 11px;
+  font-size: 11px;
+  background: #edf2f9;
+  color: #325687;
+}
+.technical-experience-projects button:hover {
+  background: #e2ebf8;
+  border-color: #9cb5db;
+}
+@media (max-width: 1100px) {
+  .technical-experience-labels,
+  .technical-experience-row { gap: 24px; grid-template-columns: minmax(0, .9fr) minmax(0, 1.8fr) 102px; }
+  .technical-experience-title h3 { font-size: 16px; }
+}
+@media (max-width: 800px) {
+  .technical-experience-labels { display: none; }
+  .technical-experience-row { grid-template-columns: minmax(0, 1fr); gap: 17px; }
+  .technical-experience-title h3 { font-size: 18px; }
+  .technical-experience-projects { flex-direction: row; flex-wrap: wrap; }
+  .technical-experience-tasks { font-size: 14px; }
+}

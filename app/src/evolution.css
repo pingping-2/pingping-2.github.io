@@ -1,0 +1,204 @@
+.evolution-stage-picker {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 26px 0 20px;
+}
+.evolution-stage-picker button {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 17px 14px;
+  min-height: 64px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: #fff;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: left;
+  line-height: 1.6;
+  word-break: keep-all;
+}
+.evolution-stage-picker button > span {
+  color: #426996;
+  font: 10px Consolas, monospace;
+}
+.evolution-stage-picker button > svg {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.evolution-stage-picker button[aria-pressed='true'] {
+  background: #eaf1fb;
+  border-color: #b5cbed;
+  color: #234f92;
+  font-weight: 650;
+}
+.evolution-stage-picker button:hover {
+  border-color: #9fbce3;
+}
+.evolution-stage-content {
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+.evolution-stage-content > h4,
+.search-evaluation > h4 {
+  margin: 0 0 20px;
+  font-size: 21px;
+  line-height: 1.6;
+  letter-spacing: -0.5px;
+  word-break: keep-all;
+}
+.evolution-narrative {
+  margin: 0;
+}
+.evolution-narrative > div {
+  display: grid;
+  grid-template-columns: 87px minmax(0, 1fr);
+  gap: 15px;
+  margin: 18px 0;
+  align-items: baseline;
+}
+.evolution-narrative dt {
+  font-size: 12px;
+  font-weight: 650;
+  color: #335b96;
+}
+.evolution-narrative dd,
+.evaluation-context,
+.evaluation-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.9;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+.presentation-evidence {
+  margin-top: 23px;
+  border-top: 1px solid var(--line);
+}
+.presentation-evidence > summary {
+  padding: 16px 2px;
+  min-height: 48px;
+  cursor: pointer;
+  color: #335b96;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.7;
+}
+.presentation-evidence > summary > span {
+  float: right;
+  margin-left: 10px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 400;
+}
+.presentation-evidence .evidence-figure:first-of-type {
+  margin-top: 4px;
+}
+.presentation-evidence .evidence-figure:last-child {
+  margin-bottom: 0;
+}
+.search-evaluation {
+  margin-top: 35px;
+}
+.search-evaluation > .eyebrow {
+  font-size: 9px;
+  color: #3866ae;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+.search-evaluation > h4 {
+  margin-bottom: 12px;
+}
+.metric-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 22px 0 17px;
+  font-variant-numeric: tabular-nums;
+}
+.metric-table th,
+.metric-table td {
+  padding: 17px 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+}
+.metric-table thead th {
+  padding-block: 13px;
+  background: #eaf0f8;
+  color: #335b96;
+  font-size: 12px;
+  font-weight: 600;
+}
+.metric-table th:first-child {
+  width: 36%;
+}
+.metric-table tbody th {
+  font-size: 13px;
+  font-weight: 550;
+}
+.metric-table td {
+  font-size: 17px;
+  color: var(--muted);
+}
+.metric-table .metric-after {
+  color: #245dc0;
+  font-weight: 650;
+}
+.metric-track {
+  display: block;
+  margin-top: 9px;
+  height: 4px;
+  border-radius: 4px;
+  background: #e4ebf4;
+  overflow: hidden;
+}
+.metric-track > i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: #9cacc2;
+}
+.metric-after .metric-track > i {
+  background: #3776d7;
+}
+.evaluation-note {
+  font-size: 12px;
+}
+@media (max-width: 600px) {
+  .evolution-stage-picker {
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
+  .evolution-stage-picker button {
+    min-height: 48px;
+    padding: 12px 14px;
+    font-size: 12px;
+  }
+  .evolution-stage-content {
+    padding: 19px 17px;
+  }
+  .evolution-stage-content > h4,
+  .search-evaluation > h4 {
+    font-size: 19px;
+  }
+  .evolution-narrative > div {
+    grid-template-columns: 1fr;
+    gap: 7px;
+    margin-block: 22px;
+  }
+  .metric-table th,
+  .metric-table td {
+    padding: 15px 6px;
+  }
+  .metric-table tbody th,
+  .metric-table thead th {
+    font-size: 11px;
+  }
+  .metric-table td {
+    font-size: 15px;
+  }
+}
